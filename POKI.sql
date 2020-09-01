@@ -98,8 +98,12 @@ join PoemEmotion pe
 on p.id=pe.PoemId
 join Author a
 on p.AuthorId = a.Id
-where pe.EmotionId = 4
+where pe.EmotionId = 2
 group by a.GenderId
 order by count;
 
+--My fave poem
+Select Top(1) Title, TEXT
+from Poem
+Where Title LIKE 'clock';
 
